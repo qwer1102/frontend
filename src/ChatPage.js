@@ -9,7 +9,7 @@ export default function ChatPage() {
   const nickname = new URLSearchParams(useLocation().search).get('nickname');
 
   useEffect(() => {
-    const ws = new WebSocket('ws://localhost:8000/ws');
+    const ws = new WebSocket('ws://chat-backend-production-5553.up.railway.app/ws');
     socketRef.current = ws;
 
     ws.onopen = () => {
